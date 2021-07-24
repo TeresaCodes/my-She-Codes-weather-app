@@ -3,7 +3,7 @@ function displayCity(event) {
   let city = document.querySelector("#current-city");
   let input = document.querySelector("#search-city");
   city.innerHTML = `${input.value}`;
-  let apiKey = "08cdd904cc8210c22822d4302d25eb21";
+  let apiKey = "secret";
   let cityName = input.value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
@@ -16,7 +16,7 @@ function showTemp(response) {
   currentTemperature.innerHTML = `${currentDegrees}°C`;
 }
 function getPosition(position) {
-  let apiKey = "08cdd904cc8210c22822d4302d25eb21";
+  let apiKey = "secret";
   let currentLatitude = position.coords.latitude;
   let currentLongitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&appid=${apiKey}&units=metric`;
